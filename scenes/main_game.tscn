@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://8dbbjk36gyc4"]
+[gd_scene load_steps=9 format=3 uid="uid://8dbbjk36gyc4"]
 
 [ext_resource type="Script" path="res://scripts/main_game.gd" id="1_frpvk"]
 [ext_resource type="PackedScene" uid="uid://bwqf1xc6wvq75" path="res://scenes/paddle.tscn" id="1_hkm70"]
@@ -13,8 +13,23 @@ size = Vector2(1163.5, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xms2p"]
 size = Vector2(21, 650)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_deihx"]
+size = Vector2(20, 676)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8dne"]
+size = Vector2(25, 680)
+
 [node name="MainGame" type="Node2D"]
 script = ExtResource("1_frpvk")
+
+[node name="ball" parent="." instance=ExtResource("2_30cqo")]
+position = Vector2(570, 320)
+
+[node name="PaddleRight" parent="." instance=ExtResource("1_hkm70")]
+position = Vector2(1093, 229)
+
+[node name="PaddleLeft" parent="." instance=ExtResource("1_hkm70")]
+position = Vector2(32, 229)
 
 [node name="arena" type="StaticBody2D" parent="."]
 
@@ -29,15 +44,7 @@ shape = SubResource("RectangleShape2D_l3joa")
 [node name="Divider" type="CollisionShape2D" parent="arena"]
 position = Vector2(573.5, 320)
 shape = SubResource("RectangleShape2D_xms2p")
-
-[node name="PaddleRight" parent="." instance=ExtResource("1_hkm70")]
-position = Vector2(1093, 229)
-
-[node name="PaddleLeft" parent="." instance=ExtResource("1_hkm70")]
-position = Vector2(32, 229)
-
-[node name="ball" parent="." instance=ExtResource("2_30cqo")]
-position = Vector2(570, 320)
+disabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -54,3 +61,16 @@ offset_top = 23.0
 offset_right = 902.0
 offset_bottom = 46.0
 text = "Player Score"
+
+[node name="LeftGoal" type="Area2D" parent="."]
+position = Vector2(0, 320)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftGoal"]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_deihx")
+
+[node name="RightGoal" type="Area2D" parent="."]
+position = Vector2(1159, 320)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightGoal"]
+shape = SubResource("RectangleShape2D_l8dne")
