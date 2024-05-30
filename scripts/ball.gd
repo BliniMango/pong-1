@@ -6,5 +6,5 @@ func _ready() -> void:
 	reset_ball()
 
 func reset_ball() -> void:
-	 # Apply an initial random impulse to the ball
-	linear_velocity = Vector2.RIGHT.rotated(randf() * PI * 2) * speed
+	var direction = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
+	linear_velocity = direction * speed
