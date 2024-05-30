@@ -1,9 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://8dbbjk36gyc4"]
+[gd_scene load_steps=4 format=3 uid="uid://8dbbjk36gyc4"]
 
-[ext_resource type="Texture2D" uid="uid://c5hov3rrkbxa6" path="res://art/icon.svg" id="1_ncffv"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wdymf"]
+size = Vector2(1153, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3joa"]
+size = Vector2(1163.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xms2p"]
+size = Vector2(21, 650)
 
 [node name="MainGame" type="Node2D"]
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(341, 215)
-texture = ExtResource("1_ncffv")
+[node name="arena" type="StaticBody2D" parent="."]
+
+[node name="BottomWall" type="CollisionShape2D" parent="arena"]
+position = Vector2(578.5, 656)
+shape = SubResource("RectangleShape2D_wdymf")
+
+[node name="TopWall" type="CollisionShape2D" parent="arena"]
+position = Vector2(570.25, -8)
+shape = SubResource("RectangleShape2D_l3joa")
+
+[node name="Divider" type="CollisionShape2D" parent="arena"]
+position = Vector2(573.5, 320)
+shape = SubResource("RectangleShape2D_xms2p")
