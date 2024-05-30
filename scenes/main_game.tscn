@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://8dbbjk36gyc4"]
+[gd_scene load_steps=10 format=3 uid="uid://8dbbjk36gyc4"]
 
 [ext_resource type="Script" path="res://scripts/main_game.gd" id="1_frpvk"]
 [ext_resource type="PackedScene" uid="uid://bwqf1xc6wvq75" path="res://scenes/paddle.tscn" id="1_hkm70"]
 [ext_resource type="PackedScene" uid="uid://cjhidv8ihv5ij" path="res://scenes/ball.tscn" id="2_30cqo"]
+[ext_resource type="PackedScene" uid="uid://3uakdty2oosn" path="res://scenes/paddle_ai.tscn" id="4_6l8fw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wdymf"]
 size = Vector2(1153, 20)
@@ -27,9 +28,6 @@ position = Vector2(570, 320)
 
 [node name="PaddleRight" parent="." instance=ExtResource("1_hkm70")]
 position = Vector2(1093, 229)
-
-[node name="PaddleLeft" parent="." instance=ExtResource("1_hkm70")]
-position = Vector2(32, 229)
 
 [node name="arena" type="StaticBody2D" parent="."]
 
@@ -74,3 +72,6 @@ position = Vector2(1159, 320)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightGoal"]
 shape = SubResource("RectangleShape2D_l8dne")
+
+[node name="paddleAI" parent="." instance=ExtResource("4_6l8fw")]
+position = Vector2(55, 229)

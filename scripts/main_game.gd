@@ -13,8 +13,8 @@ var score_right = 0
 
 
 func _ready() -> void:
-	score_left_label = str(score_left)
-	score_right_label = str(score_right)
+	score_left_label.text = str(score_left)
+	score_right_label.text = str(score_right)
 	if ball == null:
 		ball = ball_scene
 		add_child(ball)
