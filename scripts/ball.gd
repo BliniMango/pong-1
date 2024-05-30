@@ -9,4 +9,4 @@ func _ready() -> void:
 func _integrate_forces(state):
 	var velocity = state.get_linear_velocity()
 	velocity = velocity.normalized() * speed
-	state.linear_velocity()
+	state.set_linear_velocity(velocity)
