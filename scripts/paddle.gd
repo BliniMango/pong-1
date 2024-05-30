@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 200
+@export var speed = 150
 
 func _process(_delta):
 	if Input.is_action_pressed("ui_up"):
