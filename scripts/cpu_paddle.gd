@@ -3,7 +3,7 @@ extends StaticBody2D
 @export var speed: float = 300
 @export var ball_path: NodePath
 
-var ball: CharacterBody2D
+var ball: RigidBody2D
 
 func _ready():
 	ball = get_node(ball_path)
