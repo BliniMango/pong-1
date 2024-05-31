@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://di6h60x5v4i3d"]
+
+[ext_resource type="FontFile" uid="uid://b5l8yi52qavq3" path="res://fonts/Kenney Rocket Square.ttf" id="1_7uq63"]
+
+[resource]
+font = ExtResource("1_7uq63")
+font_size = 20

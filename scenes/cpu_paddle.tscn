@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://qoyxh7n3s6y2"]
+
+[ext_resource type="Script" path="res://scripts/cpu_paddle.gd" id="2_5nlcm"]
+[ext_resource type="Texture2D" uid="uid://be01qa5quaeip" path="res://art/panel-border-027.png" id="2_u3org"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qugl2"]
+size = Vector2(24, 136)
+
+[node name="CPUPaddle" type="StaticBody2D"]
+script = ExtResource("2_5nlcm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(12, 68)
+scale = Vector2(0.5, 2.83333)
+texture = ExtResource("2_u3org")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12, 68)
+shape = SubResource("RectangleShape2D_qugl2")

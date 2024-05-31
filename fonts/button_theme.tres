@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://7kdf8qix0uc7"]
+
+[ext_resource type="FontFile" uid="uid://b5l8yi52qavq3" path="res://fonts/Kenney Rocket Square.ttf" id="1_inwov"]
+
+[resource]
+default_font = ExtResource("1_inwov")
