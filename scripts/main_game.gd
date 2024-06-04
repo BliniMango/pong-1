@@ -24,14 +24,16 @@ func update_score_labels():
 func _on_left_score_body_entered(body):
 	body.queue_free()
 	var ball_respawn = preload("res://scenes/ball.tscn").instantiate()
-	add_child(ball_respawn)
 	ball_respawn.global_position = Vector2(576, 324)
+	add_child(ball_respawn)
+	
 	tally_points("right")
 
 func _on_right_score_body_entered(body):
 	var ball_respawn = preload("res://scenes/ball.tscn").instantiate()
-	add_child(ball_respawn)
 	ball_respawn.global_position = Vector2(576, 324)
+	add_child(ball_respawn)
+	
 	tally_points("left")
 
 # boarder collison detection
