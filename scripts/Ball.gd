@@ -1,17 +1,17 @@
 extends CharacterBody2D
 
 const speed = 300
-var dir = Vector2.ZERO
+var direction = Vector2.ZERO
 
 func _ready():
 #	randomize()
 #	linear_velocity = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized() * speed
-	dir.y = [1, -1].pick_random()
-	dir.x = [1, -1].pick_random()
+	direction.y = [1, -1].pick_random()
+	direction.x = [1, -1].pick_random()
 	
 func _physics_process(delta):
-	if dir != Vector2.ZERO:
-		velocity = dir * speed
+	if direction != Vector2.ZERO:
+		velocity = direction * speed
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, speed)
 	move_and_slide()

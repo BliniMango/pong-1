@@ -24,3 +24,11 @@ func _on_left_score_body_entered(body):
 
 func _on_right_score_body_entered(body):
 	tally_points("left")
+
+
+func _on_top_boarder_body_entered(body):
+	body.direction.y *= -1
+
+
+func _on_bottom_boarder_body_entered(body):
+	body.direction.y *= -1
