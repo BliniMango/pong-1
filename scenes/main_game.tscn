@@ -54,6 +54,8 @@ shape = SubResource("RectangleShape2D_anjf1")
 one_way_collision = true
 
 [node name="LeftScore" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_1g7l7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftScore"]
@@ -61,6 +63,8 @@ position = Vector2(-15, 323.5)
 shape = SubResource("RectangleShape2D_lrr52")
 
 [node name="RightScore" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("2_02uie")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightScore"]

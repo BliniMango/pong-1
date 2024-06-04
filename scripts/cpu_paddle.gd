@@ -13,5 +13,5 @@ func _process(delta):
 		position.y += speed * delta
 	elif ball.position.y < position.y - $Sprite2D.texture.get_height() / 2:
 		position.y -= speed * delta
-	# To ensure the paddle stays within bounds
+	# to ensure the paddle stays within bounds
 	position.y = clamp(position.y, 0, 600 - $Sprite2D.texture.get_height())

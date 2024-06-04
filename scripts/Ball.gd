@@ -3,9 +3,8 @@ extends CharacterBody2D
 const speed = 300
 var direction = Vector2.ZERO
 
+# spawns in random direction when 
 func _ready():
-#	randomize()
-#	linear_velocity = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized() * speed
 	direction.y = [1, -1].pick_random()
 	direction.x = [1, -1].pick_random()
 	
@@ -15,21 +14,6 @@ func _physics_process(delta):
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, speed)
 	move_and_slide()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #func _integrate_forces(state):

@@ -8,8 +8,9 @@ func _process(delta):
 		velocity.y -= speed * delta
 	elif Input.is_action_pressed("ui_down"):
 		velocity.y += speed* delta
-		
+	
 	position += velocity
-	# Make sure paddle stay in bounds
+	
+	# make sure paddle stay in bounds
 	position.y = clamp(position.y, 0, 600 -
 	$Sprite2D.texture.get_height())
