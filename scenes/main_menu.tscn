@@ -39,6 +39,8 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_6j5m7")
 theme_override_font_sizes/font_size = 20
 text = "Pong"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
