@@ -36,7 +36,8 @@ grow_vertical = 2
 color = Color(1, 1, 1, 0.847059)
 
 [node name="Boarders" type="StaticBody2D" parent="."]
-collision_layer = 2
+collision_layer = 0
+collision_mask = 2
 
 [node name="TopBoarder" type="CollisionShape2D" parent="Boarders"]
 position = Vector2(575, -24)
