@@ -41,10 +41,12 @@ collision_layer = 2
 [node name="TopBoarder" type="CollisionShape2D" parent="Boarders"]
 position = Vector2(575, -24)
 shape = SubResource("RectangleShape2D_anjf1")
+one_way_collision = true
 
 [node name="BottomBoarder" type="CollisionShape2D" parent="Boarders"]
 position = Vector2(575.5, 672)
 shape = SubResource("RectangleShape2D_anjf1")
+one_way_collision = true
 
 [node name="LeftScore" type="Area2D" parent="."]
 script = ExtResource("1_1g7l7")
@@ -83,11 +85,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CPUPaddle" parent="." instance=ExtResource("2_rlhla")]
-position = Vector2(24, 256)
+position = Vector2(0, 256)
 ball_path = NodePath("../Ball")
 
 [node name="PlayerPaddle" parent="." instance=ExtResource("3_d8tsi")]
-position = Vector2(1104, 256)
+position = Vector2(1128, 256)
 
 [node name="Ball" parent="." instance=ExtResource("2_30cqo")]
 position = Vector2(576, 324)
